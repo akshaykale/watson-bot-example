@@ -10,7 +10,7 @@ const BotEvents = require("viber-bot").Events;
 const TextMessage = require("viber-bot").Message.Text;
 
 //dependancies 
-var keyboards = require("./keyboards.js");
+//var keyboards = require("./keyboards.js");
 //var constants = require("./constants.js");
 var logger = require("./logger.js");
 
