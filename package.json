@@ -2,11 +2,16 @@
   "name": "sample_watson_bot",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "dependencies": {
     "config": "^1.25.1",
     "prompt-sync": "^4.1.4",
-    "watson-developer-cloud": "^2.25.1"
+    "watson-developer-cloud": "^2.25.1",
+    "express": "^4.14.1",
+    "request": "^2.79.0",
+    "viber-bot": "^1.0.6",
+    "winston": "^2.3.1",
+    "winston-console-formatter": "^0.3.1"
   },
   "devDependencies": {},
   "scripts": {
