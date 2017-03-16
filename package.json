@@ -1,8 +1,18 @@
 {
-  "name": "sample_watson_bot",
-  "version": "1.0.0",
-  "description": "",
+  "name": "sample_watsondsfds_bot",
+  "version": "1.1.0",
+  "description": "viberbot watson",
   "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "engines": {
+    "node": ">=5",
+    "npm": ">=3"
+  },
+  "author": "akshaykale",
+  "license": "ISC",
   "dependencies": {
     "config": "^1.25.1",
     "prompt-sync": "^4.1.4",
@@ -12,11 +22,5 @@
     "viber-bot": "^1.0.6",
     "winston": "^2.3.1",
     "winston-console-formatter": "^0.3.1"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "node src/index.js"
-  },
-  "author": "akshay kale",
-  "license": "ISC"
+  }
 }
