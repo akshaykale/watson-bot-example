@@ -5,6 +5,7 @@ Watson bot to search and book golf course using gora APIs.
 > create `config` directory for storing the configurations.<br>
 > add file `default.json` to `config/default.json`
 
+#### config/default.json
 ```json
 {
   "conv":{
