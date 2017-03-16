@@ -81,7 +81,7 @@ viber_bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
 
     conversation.message({
     input: { text: message.text },
-      context : watson_resp.context,
+      context : watson_resp == null ? null : watson_resp.context,
     }, processResponse);
 
 
