@@ -37,3 +37,6 @@ Watson bot to search and book golf course using gora APIs.
   }
 }
 ```
+
+
+![screenshot_bot](https://github.com/akshaykale/watson-viber-bot-example/blob/master/viber-watson-conversation.png)
