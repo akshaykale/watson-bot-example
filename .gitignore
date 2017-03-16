@@ -31,7 +31,7 @@ node_modules
 jspm_packages
 
 #configs
-#config
+config
 
 # Optional npm cache directory
 .npm
