@@ -21,15 +21,15 @@ var watson_resp = null;
 
 // Set up Conversation service wrapper.
 var conversation = new ConversationV1({
-  username: config.get('conv.username'), // replace with username from service key
-  password: config.get('conv.password'), // replace with password from service key
-  path: { workspace_id: config.get('conv.workspace_id') }, // replace with workspace ID
+  username: config.get('conv.username'), 
+  password: config.get('conv.password'), 
+  path: { workspace_id: config.get('conv.workspace_id') }, 
   version_date: '2016-07-11'
 });
 //Viber
 const viber_bot = new ViberBot( {
-    authToken: "459121b6b275dc7e-ce112d134b83409f-a5e1edfe185f37b3", // Learn how to get your access token at developers.viber.com
-    name: "Spinaxon",
+    authToken: config.get('viber.auth_token'),
+    name: config.get('viber.name'),
     avatar: "https://raw.githubusercontent.com/devrelv/drop/master/151-icon.png" // Just a placeholder avatar to display the user
 });
 
