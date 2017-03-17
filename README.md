@@ -1,5 +1,5 @@
 # watson-bot-example
-Watson bot to search and book golf course using gora APIs.
+Viber chat interface to interact with watson conservation APIs.
 
 ### Setup
 > create `config` directory for storing the configurations.<br>
@@ -23,7 +23,7 @@ Watson bot to search and book golf course using gora APIs.
 
 > For deploying, you need `config/production.json` file  for all the configurations.
 
-##### config/default.json
+##### config/production.json
 ```json
 {
   "conv":{
