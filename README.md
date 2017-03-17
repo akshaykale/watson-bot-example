@@ -1,4 +1,4 @@
-# watson-bot-example
+# watson-viber-bot-example
 Viber chat interface to interact with watson conservation APIs.
 
 ### Setup
