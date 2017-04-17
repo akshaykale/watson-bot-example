@@ -36,7 +36,8 @@ function keyboard_ichiba(data){
         "ActionType": "open-url",
         "ActionBody": data[0].item_url,
         "BgColor": "#f7bb3f",
-        "Image": data[0].picture[0]
+        "BgMediaType":"picture",
+        "BgMedia":JSON.stringify(data[0].picture[0])
     }, {
         "Columns": 2,
         "Rows": 2,
@@ -47,7 +48,7 @@ function keyboard_ichiba(data){
         "ActionType": "open-url",
         "ActionBody": data[1].item_url,
         "BgColor": "#7eceea",
-        "Image": data[1].picture[0]
+        "Image": JSON.stringify(data[1].picture[0])
     }, {
         "Columns": 2,
         "Rows": 2,
