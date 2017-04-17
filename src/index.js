@@ -58,7 +58,7 @@ function processResponse(err, response) {
           logger.log(data);
           // raw response 
           //logger.log(response);
-          say(viber_resp, "Here is the result of your search.",keyboards.get['ichibaitem']);
+          say(viber_resp, "Here is the result of your search.",keyboards.get('ichibaitem', data));
       });
   }else{
     say(viber_resp,response.output.text[0]);
@@ -66,8 +66,8 @@ function processResponse(err, response) {
 }
 
 
-function say(response, message, keyword=null, tracking=null) {
-      response.send(new TextMessage(message),tracking);
+function say(response, message, keyboard=null, tracking=null) {
+      response.send(new TextMessage(message,keyboard),tracking);
 }
 
 

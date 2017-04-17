@@ -22,7 +22,7 @@ exports.get =  function(keyboard_type, data){
 
 
 function keyboard_ichiba(data){
-
+    
     var ichibaitem = {
     "Type": "keyboard",
     "Buttons": [{
