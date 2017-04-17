@@ -25,7 +25,7 @@ function keyboard_ichiba(data){
     logger.log("ICHIBA -> "+JSON.stringify(data[0].picture));
     logger.log("ICHIBA -> "+JSON.stringify(data[0].picture[0]));
 
-    var img1 = data[0].picture[0].replace('@','%40');
+    var img1 = "http://gora.golf.rakuten.co.jp/img/golf/200051/photo1.jpg";
     logger.log(img1);
 
     var ichibaitem = {
