@@ -25,7 +25,11 @@ function keyboard_ichiba(data){
     logger.log("ICHIBA -> "+JSON.stringify(data[0].picture));
     logger.log("ICHIBA -> "+JSON.stringify(data[0].picture[0]));
 
-    var img1 = "http://gora.golf.rakuten.co.jp/img/golf/200051/photo1.jpg";
+    var img1 = "http://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/e1146/e114677h_l.jpg";
+    var img2 = "http://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/e1146/e114677h_l.jpg?_ex=64x64";
+    var img3 = "https://goo.gl/hOi3lh";
+    
+    
     logger.log(img1);
 
     var ichibaitem = {
@@ -63,7 +67,7 @@ function keyboard_ichiba(data){
         "ActionType": "open-url",
         "ActionBody": data[2].item_url,
         "BgColor": "#f6f7f9",
-        "Image": data[2].picture[0]
+        "Image": img2
     }, {
         "Columns": 2,
         "Rows": 2,
@@ -74,7 +78,7 @@ function keyboard_ichiba(data){
         "ActionType": "open-url",
         "ActionBody": data[3].item_url,
         "BgColor": "#dd8157",
-        "Image": data[3].picture[0]
+        "Image": img3
     }, {
         "Columns": 2,
         "Rows": 2,
