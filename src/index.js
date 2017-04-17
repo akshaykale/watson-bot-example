@@ -50,7 +50,10 @@ function processResponse(err, response) {
           logger.log(data);
           // raw response 
           //logger.log(response);
-          say(viber_resp, "Here are the golf courses.",keyboards.get('golfcourse',data));
+          var tracking_data = {
+            previous:"golf"
+          };
+          say(viber_resp, "Here are the golf courses.",keyboards.get('golfcourse',data),tracking_data);
       });
   }else if(response.output.nodes_visited[0]=='item_search_request_confirmed' || response.output.nodes_visited[0]=='item_search_request_confirmed_'){
       restClient.get("https://akshay-api.herokuapp.com/gora/ichibaitem?keyword="+response.context.item+"&gender="+response.context.gender, function (data, response) {
@@ -58,7 +61,11 @@ function processResponse(err, response) {
           logger.log(data);
           // raw response 
           //logger.log(response);
-          say(viber_resp, "Here is the result of your search.",keyboards.get('ichibaitem', data));
+          var tracking_data = {
+            previous:"ichiba"
+          };
+          say(viber_resp, "Here is the result of your search.",keyboards.get('ichibaitem', data),tracking_data);
+          
       });
   }else{
     say(viber_resp,response.output.text[0]);
@@ -75,6 +82,13 @@ viber_bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
 
     logger.log(message);
     
+    var track_data = message.trackingData;
+    if( track_data){
+      if (track_data.previous == "golf")
+        return;
+      if (track_data.previous == "ichiba")
+        return;
+    }
     viber_resp = response;
 
     conversation.message({
