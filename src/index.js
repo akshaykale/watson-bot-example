@@ -12,7 +12,7 @@ var RestClient = require('node-rest-client').Client;
 var restClient = new RestClient();
 
 //dependancies 
-//var keyboards = require("./keyboards.js");
+var keyboards = require("./keyboards.js");
 //var constants = require("./constants.js");
 var logger = require("./logger.js");
 
@@ -50,7 +50,7 @@ function processResponse(err, response) {
           logger.log(data);
           // raw response 
           //logger.log(response);
-          sendGenericMessage(senderID, data);
+          say(viber_resp, "Here are the golf courses.",keyboards.get('golfcourse',data));
       });
   }else if(response.output.nodes_visited[0]=='item_search_request_confirmed' || response.output.nodes_visited[0]=='item_search_request_confirmed_'){
       restClient.get("https://akshay-api.herokuapp.com/gora/ichibaitem?keyword="+response.context.item+"&gender="+response.context.gender, function (data, response) {
@@ -58,7 +58,7 @@ function processResponse(err, response) {
           logger.log(data);
           // raw response 
           //logger.log(response);
-          sendGenericMessage_Ichiba(senderID, data);
+          say(viber_resp, "Here is the result of your search.",keyboards.get['ichibaitem']);
       });
   }else{
     say(viber_resp,response.output.text[0]);
@@ -66,7 +66,7 @@ function processResponse(err, response) {
 }
 
 
-function say(response, message, tracking=null) {
+function say(response, message, keyword=null, tracking=null) {
       response.send(new TextMessage(message),tracking);
 }
 
