@@ -24,6 +24,9 @@ exports.get =  function(keyboard_type, data){
 function keyboard_ichiba(data){
     logger.log("ICHIBA -> "+JSON.stringify(data[0].picture));
     logger.log("ICHIBA -> "+JSON.stringify(data[0].picture[0]));
+
+    var img1 = data[0].picture[0].replace('@','%40');
+
     var ichibaitem = {
     "Type": "keyboard",
     "Buttons": [{
@@ -37,7 +40,7 @@ function keyboard_ichiba(data){
         "ActionBody": data[0].item_url,
         "BgColor": "#f7bb3f",
         "BgMediaType":"picture",
-        "BgMedia":JSON.stringify(data[0].picture[0])
+        "BgMedia":img1
     }, {
         "Columns": 2,
         "Rows": 2,
@@ -48,7 +51,7 @@ function keyboard_ichiba(data){
         "ActionType": "open-url",
         "ActionBody": data[1].item_url,
         "BgColor": "#7eceea",
-        "Image": JSON.stringify(data[1].picture[0])
+        "Image": img1
     }, {
         "Columns": 2,
         "Rows": 2,
