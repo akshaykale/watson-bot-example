@@ -28,7 +28,7 @@ function keyboard_ichiba(data){
     "Buttons": [{
         "Columns": 2,
         "Rows": 2,
-        "Text": "<br><p style=\"color: #ffffff; background-color: #ff0000\">"+data[0].price+"</p>",
+        "Text": "<br><p style=\"color: #ffffff; background-color: #FF373636\">"+data[0].price+" ¥</p>",
         "TextSize": "small",
         "TextHAlign": "center",
         "TextVAlign": "bottom",
@@ -39,7 +39,7 @@ function keyboard_ichiba(data){
     }, {
         "Columns": 2,
         "Rows": 2,
-        "Text": "<br><font color=\"#494E67\"><b>"+data[1].price+" ¥</b></font>",
+        "Text": "<br><p style=\"color: #ffffff; background-color: #FF373636\">"+data[1].price+" ¥</p>",
         "TextSize": "small",
         "TextHAlign": "center",
         "TextVAlign": "bottom",
@@ -50,7 +50,7 @@ function keyboard_ichiba(data){
     }, {
         "Columns": 2,
         "Rows": 2,
-        "Text": "<br><font color=\"#494E67\"><b>"+data[2].price+" ¥</b></font>",
+        "Text": "<br><p style=\"color: #ffffff; background-color: #FF373636\">"+data[2].price+" ¥</p>",
         "TextSize": "small",
         "TextHAlign": "center",
         "TextVAlign": "bottom",
@@ -61,7 +61,7 @@ function keyboard_ichiba(data){
     }, {
         "Columns": 2,
         "Rows": 2,
-        "Text": "<br><font color=\"#494E67\"><b>"+data[3].price+" ¥</b></font>",
+        "Text": "<br><p style=\"color: #ffffff; background-color: #FF373636\">"+data[3].price+" ¥</p>",
         "TextSize": "small",
         "TextHAlign": "center",
         "TextVAlign": "bottom",
@@ -72,7 +72,7 @@ function keyboard_ichiba(data){
     }, {
         "Columns": 2,
         "Rows": 2,
-        "Text": "<br><font color=\"#494E67\"><b>"+data[4].price+" ¥</b></font>",
+        "Text": "<br><p style=\"color: #ffffff; background-color: #FF373636\">"+data[4].price+" ¥</p>",
         "TextSize": "small",
         "TextHAlign": "center",
         "TextVAlign": "bottom",
@@ -94,7 +94,7 @@ function keyboard_golf(data){
     "Buttons": [{
         "Columns": 2,
         "Rows": 2,
-        "Text": "<br><font color=\"#494E67\"><b>"+data[0].name+"</b></font>",
+        "Text": "<br><p style=\"color: #ffffff; background-color: #FF373636\">"+data[0].name+" ¥</p>",
         "TextSize": "small",
         "TextHAlign": "center",
         "TextVAlign": "middle",
@@ -105,7 +105,7 @@ function keyboard_golf(data){
     }, {
         "Columns": 2,
         "Rows": 2,
-        "Text": "<br><font color=\"#494E67\"><b>"+data[1].name+"</b></font>",
+        "Text": "<br><p style=\"color: #ffffff; background-color: #FF373636\">"+data[1].name+" ¥</p>",
         "TextSize": "small",
         "TextHAlign": "center",
         "TextVAlign": "middle",
@@ -116,7 +116,7 @@ function keyboard_golf(data){
     }, {
         "Columns": 2,
         "Rows": 2,
-        "Text": "<br><font color=\"#494E67\"><b>"+data[2].name+"</b></font>",
+        "Text": "<br><p style=\"color: #ffffff; background-color: #FF373636\">"+data[2].name+" ¥</p>",
         "TextSize": "small",
         "TextHAlign": "center",
         "TextVAlign": "middle",
@@ -127,7 +127,7 @@ function keyboard_golf(data){
     }, {
         "Columns": 2,
         "Rows": 2,
-        "Text": "<br><font color=\"#494E67\"><b>"+data[3].name+"</b></font>",
+        "Text": "<br><p style=\"color: #ffffff; background-color: #FF373636\">"+data[3].name+" ¥</p>",
         "TextSize": "small",
         "TextHAlign": "center",
         "TextVAlign": "middle",
@@ -138,7 +138,7 @@ function keyboard_golf(data){
     }, {
         "Columns": 2,
         "Rows": 2,
-        "Text": "<br><font color=\"#494E67\"><b>"+data[4].name+"</b></font>",
+        "Text": "<br><p style=\"color: #ffffff; background-color: #FF373636\">"+data[4].name+" ¥</p>",
         "TextSize": "small",
         "TextHAlign": "center",
         "TextVAlign": "middle",
