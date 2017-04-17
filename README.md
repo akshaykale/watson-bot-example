@@ -2,15 +2,18 @@
 Viber chat interface to interact with watson conservation APIs.
 
 ### Setup
+
 > Clone the repository master branch <br>
 ```
 git clone https://github.com/akshaykale/watson-viber-bot-example.git
 ```
 <br>
-> install all the dependencies <br>
+
+> Install all the dependencies <br>
 ```
 npm install
 ```
+<br>
 
 
 
