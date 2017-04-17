@@ -43,7 +43,7 @@ function processResponse(err, response) {
     return;
   }
   watson_resp = response;
-
+  logger.log(JSON.stringify(response.context));
   if(response.output.nodes_visited[0]=='golf_search_request_confirmed'){
     restClient.get("https://akshay-api.herokuapp.com/gora/golfcourse?place="+response.context.place+"&date="+response.context.date, function (data, response) {
           // parsed response body as js object 
