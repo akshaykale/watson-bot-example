@@ -8,6 +8,9 @@ const ViberBot = require("viber-bot").Bot;
 const BotEvents = require("viber-bot").Events;
 const TextMessage = require("viber-bot").Message.Text;
 
+var RestClient = require('node-rest-client').Client;
+var restClient = new RestClient();
+
 //dependancies 
 //var keyboards = require("./keyboards.js");
 //var constants = require("./constants.js");
@@ -25,17 +28,13 @@ var conversation = new ConversationV1({
   path: { workspace_id: process.env.W_C_WORKSPACE_ID }, 
   version_date: '2016-07-11'
 });
-logger.log(JSON.stringify(conversation));
+
 //Viber
 const viber_bot = new ViberBot( {
     authToken: process.env.VIBER_AUTH_TOKEN,
     name: process.env.VIBER_NAME,
     avatar: process.env.VIBER_AVATAR // Just a placeholder avatar to display the user
 });
-
-// Start conversation with empty message.
-//conversation.message({}, processResponse);
-//Let viber start the conservation
 
 // Process the conversation response.
 function processResponse(err, response) {
@@ -44,27 +43,26 @@ function processResponse(err, response) {
     return;
   }
   watson_resp = response;
-  //
-  console.log(JSON.stringify(response.context, null, 2));
-  // If an intent was detected, log it out to the console.
-  //if (response.intents.length > 0) {
-    //console.log('Detected intent: #' + response.intents[0].intent);
-  //}
 
-  // Display the output from dialog, if any.
-  if (response.output.text.length != 0) {
-      console.log(response.output.text[0]);
+  if(response.output.nodes_visited[0]=='golf_search_request_confirmed'){
+    restClient.get("https://akshay-api.herokuapp.com/gora/golfcourse?place="+response.context.place+"&date="+response.context.date, function (data, response) {
+          // parsed response body as js object 
+          logger.log(data);
+          // raw response 
+          //logger.log(response);
+          sendGenericMessage(senderID, data);
+      });
+  }else if(response.output.nodes_visited[0]=='item_search_request_confirmed' || response.output.nodes_visited[0]=='item_search_request_confirmed_'){
+      restClient.get("https://akshay-api.herokuapp.com/gora/ichibaitem?keyword="+response.context.item+"&gender="+response.context.gender, function (data, response) {
+          // parsed response body as js object 
+          logger.log(data);
+          // raw response 
+          //logger.log(response);
+          sendGenericMessage_Ichiba(senderID, data);
+      });
+  }else{
+    say(viber_resp,response.output.text[0]);
   }
-
-  // Prompt for the next round of input.
-  //var newMessageFromUser = prompt('>> ');
-  //conversation.message({
-  //  input: { text: newMessageFromUser },
-  //    context : response.context,
-  //  }, processResponse)
-
-  //message to user
-  say(viber_resp,response.output.text[0]);
 }
 
 
