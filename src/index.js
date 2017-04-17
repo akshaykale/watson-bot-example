@@ -1,5 +1,4 @@
 
-var config = require('config');
 var request = require("request");
 var prompt = require('prompt-sync')();
 var ConversationV1 = require('watson-developer-cloud/conversation/v1');
@@ -26,6 +25,7 @@ var conversation = new ConversationV1({
   path: { workspace_id: process.env.W_C_WORKSPACE_ID }, 
   version_date: '2016-07-11'
 });
+logger.log(JSON.stringify(conversation));
 //Viber
 const viber_bot = new ViberBot( {
     authToken: process.env.VIBER_AUTH_TOKEN,
