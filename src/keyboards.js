@@ -26,6 +26,7 @@ function keyboard_ichiba(data){
     logger.log("ICHIBA -> "+JSON.stringify(data[0].picture[0]));
 
     var img1 = data[0].picture[0].replace('@','%40');
+    logger.log(img1);
 
     var ichibaitem = {
     "Type": "keyboard",
