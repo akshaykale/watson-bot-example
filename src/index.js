@@ -84,14 +84,9 @@ viber_bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
     
     var track_data = message.trackingData;
     if( track_data){
-      if (track_data.previous == "golf"){
-        message.trackingData = null;
-        return;
-      }
-      if (track_data.previous == "ichiba"){
-        message.trackingData = null;
-        return;
-      }
+      if (track_data.previous == "golf" || track_data.previous == "ichiba"){
+        say(response,"You can also buy for Items related to golf OR Ask for hotels/accomodation within the area.", null, null);
+        return;      
     }
     viber_resp = response;
 
