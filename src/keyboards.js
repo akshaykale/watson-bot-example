@@ -23,12 +23,7 @@ exports.get =  function(keyboard_type, data){
 
 function keyboard_ichiba(data){
     logger.log("ICHIBA -> "+JSON.stringify(data[0].picture));
-    logger.log("ICHIBA -> "+JSON.stringify(data[0].picture[0]));
-
-    var img1 = "http://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/e1146/e114677h_l.jpg";
-    var img2 = "http://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/e1146/e114677h_l.jpg?_ex=64x64";
-    var img3 = "https://goo.gl/hOi3lh";
-    
+    logger.log("ICHIBA -> "+JSON.stringify(data[0].picture[0]));    
     
     logger.log(img1);
 
@@ -37,55 +32,55 @@ function keyboard_ichiba(data){
     "Buttons": [{
         "Columns": 2,
         "Rows": 2,
-        "Text": "<br><font color=\"#494E67\"><b>"+data[0].price+" ¥</b></font>",
+        "Text": "<br><p style=\"color: #ffffff; background-color: #ff0000\">"+data[0].price+"</p>",
         "TextSize": "small",
         "TextHAlign": "center",
-        "TextVAlign": "middle",
+        "TextVAlign": "bottom",
         "ActionType": "open-url",
         "ActionBody": data[0].item_url,
         "BgColor": "#f7bb3f",
         "BgMediaType":"picture",
-        "BgMedia":img1
+        "BgMedia":data[0].picture[0]
     }, {
         "Columns": 2,
         "Rows": 2,
         "Text": "<br><font color=\"#494E67\"><b>"+data[1].price+" ¥</b></font>",
         "TextSize": "small",
         "TextHAlign": "center",
-        "TextVAlign": "middle",
+        "TextVAlign": "bottom",
         "ActionType": "open-url",
         "ActionBody": data[1].item_url,
         "BgColor": "#7eceea",
-        "Image": img1
+        "Image": data[1].picture[0]
     }, {
         "Columns": 2,
         "Rows": 2,
         "Text": "<br><font color=\"#494E67\"><b>"+data[2].price+" ¥</b></font>",
         "TextSize": "small",
         "TextHAlign": "center",
-        "TextVAlign": "middle",
+        "TextVAlign": "bottom",
         "ActionType": "open-url",
         "ActionBody": data[2].item_url,
         "BgColor": "#f6f7f9",
-        "Image": img2
+        "Image": data[2].picture[0]
     }, {
         "Columns": 2,
         "Rows": 2,
         "Text": "<br><font color=\"#494E67\"><b>"+data[3].price+" ¥</b></font>",
         "TextSize": "small",
         "TextHAlign": "center",
-        "TextVAlign": "middle",
+        "TextVAlign": "bottom",
         "ActionType": "open-url",
         "ActionBody": data[3].item_url,
         "BgColor": "#dd8157",
-        "Image": img3
+        "Image": data[3].picture[0]
     }, {
         "Columns": 2,
         "Rows": 2,
         "Text": "<br><font color=\"#494E67\"><b>"+data[4].price+" ¥</b></font>",
         "TextSize": "small",
         "TextHAlign": "center",
-        "TextVAlign": "middle",
+        "TextVAlign": "bottom",
         "ActionType": "open-url",
         "ActionBody": data[4].item_url,
         "BgColor": "#f6f7f9",
