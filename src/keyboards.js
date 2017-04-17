@@ -22,7 +22,8 @@ exports.get =  function(keyboard_type, data){
 
 
 function keyboard_ichiba(data){
-    logger.log(data);
+    logger.log("ICHIBA -> "+JSON.stringify(data[0].picture));
+    logger.log("ICHIBA -> "+JSON.stringify(data[0].picture[0]));
     var ichibaitem = {
     "Type": "keyboard",
     "Buttons": [{
