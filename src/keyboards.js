@@ -22,11 +22,7 @@ exports.get =  function(keyboard_type, data){
 
 
 function keyboard_ichiba(data){
-    logger.log("ICHIBA -> "+JSON.stringify(data[0].picture));
-    logger.log("ICHIBA -> "+JSON.stringify(data[0].picture[0]));    
     
-    logger.log(img1);
-
     var ichibaitem = {
     "Type": "keyboard",
     "Buttons": [{
@@ -39,8 +35,7 @@ function keyboard_ichiba(data){
         "ActionType": "open-url",
         "ActionBody": data[0].item_url,
         "BgColor": "#f7bb3f",
-        "BgMediaType":"picture",
-        "BgMedia":data[0].picture[0]
+        "Image": data[0].picture[0]
     }, {
         "Columns": 2,
         "Rows": 2,
