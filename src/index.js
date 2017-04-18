@@ -104,7 +104,7 @@ function say(response, message, keyboard=null, tracking=null) {
 }
 
 function say_rich(response, message, keyboard=null, tracking=null) {
-      response.send(new RichMedia(message,keyboard),tracking);
+      response.send(new RichMedia(message));//,keyboard),tracking);
 }
 
 viber_bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
