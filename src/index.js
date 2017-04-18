@@ -7,7 +7,7 @@ var ConversationV1 = require('watson-developer-cloud/conversation/v1');
 const ViberBot = require("viber-bot").Bot;
 const BotEvents = require("viber-bot").Events;
 const TextMessage = require("viber-bot").Message.Text;
-const RichMedia = require("viber-bot").Message.Rich ;
+const RichMediaMessage  = require('viber-bot').Message.Rich;
 
 var RestClient = require('node-rest-client').Client;
 var restClient = new RestClient();
