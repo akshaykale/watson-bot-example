@@ -55,31 +55,8 @@ function processResponse(err, response) {
             previous:"golf"
           };
 
-          const SAMPLE_RICH_MEDIA_GOLF = {
-              "ButtonsGroupColumns": 6,
-              "ButtonsGroupRows": 2,
-              "BgColor": "#FFFFFF",
-              "Buttons": [{
-                  "ActionBody": "http://www.website.com/go_here",
-                  "ActionType": "open-url",
-                  "BgMediaType": "picture",
-                  "Image": "http://www.images.com/img.jpg",
-                  "BgColor": "#000000",
-                  "TextOpacity": 60,
-                  "Rows": 1,
-                  "Columns": 6
-              }, {
-                  "ActionBody": "http://www.website.com/go_here",
-                  "ActionType": "open-url",
-                  "BgColor": "#85bb65",
-                  "Text": "Buy",
-                  "TextOpacity": 60,
-                  "Rows": 1,
-                  "Columns": 6
-              }]
-          };
-          //say(viber_resp, "Here are the golf courses.",keyboards.get('golfcourse',data),tracking_data);
-          say_rich(viber_resp,SAMPLE_RICH_MEDIA_GOLF)
+          say(viber_resp, "Here are the golf courses.",keyboards.get('golfcourse',data),tracking_data);
+          //say_rich(viber_resp,SAMPLE_RICH_MEDIA_GOLF)
       });
   }else if(response.output.nodes_visited[0]=='item_search_request_confirmed' || response.output.nodes_visited[0]=='item_search_request_confirmed_'){
       restClient.get("https://akshay-api.herokuapp.com/gora/ichibaitem?keyword="+response.context.item+"&gender="+response.context.gender, function (data, response) {
@@ -101,10 +78,6 @@ function processResponse(err, response) {
 
 function say(response, message, keyboard=null, tracking=null) {
       response.send(new TextMessage(message,keyboard),tracking);
-}
-
-function say_rich(response, message, keyboard=null, tracking=null) {
-      response.send(new RichMediaMessage(message));//,keyboard),tracking);
 }
 
 viber_bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
